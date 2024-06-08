@@ -20,13 +20,13 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v4
-            - run: Instalando python...
+            - run: echo "Instalando python...""
             - uses: actions/setup-python@v5
               id: id-setup-python
               with:
                 python-version: '3.10' 
-            - run : echo Versão do python instalada '${{steps.id-setup-python.outputs.python-version}}'
-            - run : Instalando dependencias....
+            - run : echo "Versão do python instalada ${{steps.id-setup-python.outputs.python-version}}"
+            - run : echo "Instalando dependencias....""
             - run : pip install -r requirements.txt
-            - run : Dependecias instaladas....
+            - run : echo "Dependecias instaladas...."
             - run : pip freeze
